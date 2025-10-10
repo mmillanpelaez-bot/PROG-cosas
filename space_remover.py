@@ -1,0 +1,1 @@
+def space_remover():
