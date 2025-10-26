@@ -23,17 +23,21 @@ def main():
             producto = input('Introduce el producto a añadir: ')
             lista.append(producto)
             print(f'{producto} añadido a la lista')
-            pausa()
 
         if opcion == '2':
-            producto =
+            producto = input('Introduce el producto a eliminar: ')
+            lista.remove(producto)
+            print(f'{producto} sacado de la lista')
+            pausa()
 
         if opcion == '3':
-
+            print('\nTu lista de la compra: ')
+            for producto in lista:
+                print('-', producto)
+            pausa()
 
         if opcion == '0':
-
-
+            break
 
 def pausa():
     input('\nPulsa ENTER para volver al menu: ')
