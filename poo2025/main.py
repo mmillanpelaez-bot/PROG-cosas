@@ -1,32 +1,34 @@
-from person import Person
-from point import Point
-from sphere import Sphere
-from cylinder import Cylinder
+from poo2025.others.person import Person
+from poo2025.geometry.point import Point
+from poo2025.geometry.sphere import Sphere
+from poo2025.geometry.cylinder import Cylinder
+from poo2025.time.hours import Hours
 
-#point
-p1 = Point(2, 3,0)
-p2 = Point(9, 1,0)
-p2.x = 2
-p2.x = 3
 
-print (p1 == p2)
+def main_point():
+    p1 = Point(2,3,0)
+    p2 = Point(9,1,0)
+    p2.x = 2
+    p2.x = 3
 
-p1 = p2
-p3 = p2
+    print (p1 == p2)
 
-p1.x = 999999999
-p3.x = 100
-print (p1.toString())
-print (p2)
+    p1 = p2
+    p3 = p2
 
-print (p1.x)
+    p1.x = 999999999
+    p3.x = 100
+    print (p1.toString())
+    print (p2)
 
-# Person
-manolo = Person ('Manolo', 69, '123456789Y', 'Calle Sinsalida', 'Musulman')
-manuela = Person ("Manuela", 96, "123456789Y", "Calle Consalida", "Manmusul")
-#manolo = Person (nome ='Manolo', age = 69, dni ='123456789Y', adress ='Calle Sinsalida', nacionality ='Musulman')
+    print (p1.x)
 
-def main(): #Point, Shape3D, Cylinder, Sphere
+def main_person():
+    manolo = Person ('Manolo', 69, '123456789Y', 'Calle Sinsalida', 'Musulman')
+    manuela = Person ("Manuela", 96, "123456789Y", "Calle Consalida", "Manmusul")
+    #manolo = Person (nome ='Manolo', age = 69, dni ='123456789Y', adress ='Calle Sinsalida', nacionality ='Musulman')
+
+def main_geometry(): #Point, Shape3D, Cylinder, Sphere
     center = Point(1, 2, 3)
 
     sphere = Sphere(center, 4)
@@ -40,5 +42,9 @@ def main(): #Point, Shape3D, Cylinder, Sphere
     with open("shapes_results.txt", "w") as f:
         f.write(str(sphere) + "\n\n" + str(cylinder))
 
+def main_hours():
+    Hours(12,4,1)
+    print (Hours)
+
 if __name__ == "__main__":
-    main()
+    main_hours()
