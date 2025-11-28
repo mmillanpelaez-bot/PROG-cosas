@@ -8,7 +8,7 @@ class Hours:
         if 0 <= hours < 24:
             self._hours = hours
         else:
-            raise ValueError("Introduce un formato de hora correcto")
+            raise ValueError("Enter a valid time format.")
 
     def get_hours(self) -> int:
         return self._hours
@@ -17,7 +17,7 @@ class Hours:
         if 0 <= minutes < 60:
             self._minutes = minutes
         else:
-            raise ValueError("Introduce un formato de hora correcto")
+            raise ValueError("Enter a valid time format.")
 
     def get_minutes(self) -> int:
         return self._minutes
@@ -26,23 +26,28 @@ class Hours:
         if 0 <= seconds < 60:
             self._seconds = seconds
         else:
-            raise ValueError("Introduce un formato de hora correcto")
+            raise ValueError("Enter a valid time format.")
 
     def get_seconds(self) -> int:
         return self._seconds
 
-    def normalize(self):
-        if
+    def increase_hours(self):
+        if self._hours == 23:
+            self._hours = 0
+        else:
+            self._hours += 1
 
-    # def convert_seconds(self):
-    #
-    # def increase_hours(self):
-    #
-    # def increase_minutes(self):
-    #
-    # def increase_seconds(self):
-    #
-    # def show_format_hours(self):
+    def increase_minutes(self):
+        if self._minutes == 23:
+            self._minutes = 0
+        else:
+            self._minutes += 1
+
+    def increase_seconds(self):
+        if self._seconds == 23:
+            self._seconds = 0
+        else:
+            self._seconds += 1
 
     def __str__(self):
         return f"{self._hours:02d}:{self._minutes:02d}:{self._seconds:02d}"

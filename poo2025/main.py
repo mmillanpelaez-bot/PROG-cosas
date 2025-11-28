@@ -1,8 +1,8 @@
 from poo2025.others.person import Person
-from poo2025.geometry.point import Point
-from poo2025.geometry.sphere import Sphere
-from poo2025.geometry.cylinder import Cylinder
 from poo2025.time.hours import Hours
+#from poo2025.geometry.point import Point
+#from poo2025.geometry.sphere import Sphere
+#from poo2025.geometry.cylinder import Cylinder
 
 
 def main_point():
@@ -43,8 +43,8 @@ def main_geometry(): #Point, Shape3D, Cylinder, Sphere
         f.write(str(sphere) + "\n\n" + str(cylinder))
 
 def main_hours():
-    Hours(12,4,1)
-    print (Hours)
+    ayer = Hours(12,4,-1)
+    print (ayer)
 
 if __name__ == "__main__":
     main_hours()
