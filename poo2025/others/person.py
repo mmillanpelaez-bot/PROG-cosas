@@ -1,9 +1,9 @@
 # poo = Programa Orientado a Objetos
 # __init__ = initialize
 class Person:
-    def __init__(self, name, age, dni, adress, nacionality):
+    def __init__(self, name: str, age: int, dni: str, adress: str, nacionality: str):
         self.name = name
-        if self.check_age(age):
+        if self.set_age(age):
             self.age = age
         else:
             self.age = 0
@@ -14,7 +14,7 @@ class Person:
         self.adress = adress
         self.nacionality = nacionality
 
-    def check_age(self, age):
+    def set_age(self, age: int):
         if 0 <= age <= 150:
             return True
         else:
@@ -23,7 +23,11 @@ class Person:
     def checkDni(self, dni):
         if len(dni) == 9 and dni[:1].isdigit() and dni[-1:].isalpha:
             letterDni = "TRWAGMYFPDXBNJZSQVHLCKE"
-            return True
+            calulation = int(dni[:-1]) % 23
+            if letterDni[calulation] == dni[-1:].upper():
+                return True
+            else:
+                return False
 
     def __str__(self):
         string = (f"name: {self.name}\n "

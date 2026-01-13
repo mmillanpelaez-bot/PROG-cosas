@@ -1,8 +1,9 @@
 from poo2025.others.person import Person
 from poo2025.time.hours import Hours
-#from poo2025.geometry.point import Point
-#from poo2025.geometry.sphere import Sphere
-#from poo2025.geometry.cylinder import Cylinder
+from poo2025.geometry.point import Point
+from poo2025.geometry.point3 import Point3
+from poo2025.geometry.sphere import Sphere
+from poo2025.geometry.cylinder import Cylinder
 
 
 def main_point():
@@ -47,4 +48,5 @@ def main_hours():
     print (ayer)
 
 if __name__ == "__main__":
-    main_hours()
+    # main_hours()
+    main_point()
