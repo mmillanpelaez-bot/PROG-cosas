@@ -1,6 +1,6 @@
 import math
 from point import Point
-from poo2025.geometry.shape3d import Shape3D
+from POO.geometry.shape3d import Shape3D
 
 class Sphere(Shape3D):
     def __init__(self, center: Point, radius: float):
